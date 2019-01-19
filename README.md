@@ -19,7 +19,7 @@ As iPad and iPhone upper versions like iPhone X, XR,XS, 8 Plus have enough space
 ![simulator screen shot - iphone x - 2019-01-19 at 10 39 10](https://user-images.githubusercontent.com/10649284/51422670-964c9d00-1bd8-11e9-9404-3cbc241eda92.png)
 ![simulator screen shot - iphone x - 2019-01-19 at 10 39 14](https://user-images.githubusercontent.com/10649284/51422671-964c9d00-1bd8-11e9-8e2d-4710cafa1f63.png)
 ![simulator screen shot - iphone x - 2019-01-19 at 10 39 20](https://user-images.githubusercontent.com/10649284/51422672-96e53380-1bd8-11e9-8480-e54a1008f076.png)
-
+![simulator screen shot - iphone x - 2019-01-19 at 10 57 47](https://user-images.githubusercontent.com/10649284/51422704-1a9f2000-1bd9-11e9-8e95-84e9be8a8480.png)
 
 
 ## Implementation:
