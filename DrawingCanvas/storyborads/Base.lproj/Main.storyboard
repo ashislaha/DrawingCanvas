@@ -108,7 +108,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJk-W4-r0q">
                                 <rect key="frame" x="16" y="632" width="52" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -133,6 +133,7 @@
                         <outlet property="canvas" destination="upo-Ik-Mhm" id="18W-c3-TaH"/>
                         <outlet property="clearOutlet" destination="t6E-7X-8jp" id="8lK-MF-fHC"/>
                         <outlet property="colorsCollection" destination="MuN-Sg-Ymu" id="YwB-si-eiH"/>
+                        <outlet property="colorsLabel" destination="pJk-W4-r0q" id="fRh-QX-eUQ"/>
                         <outlet property="lineWidthSlider" destination="hpT-k3-7bY" id="2Nu-dh-EcH"/>
                         <outlet property="themeOutlet" destination="pMs-nk-XtS" id="xkG-ba-gEf"/>
                         <outlet property="topView" destination="KUu-e5-U7O" id="0LZ-Mk-MMZ"/>

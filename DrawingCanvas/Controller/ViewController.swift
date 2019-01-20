@@ -20,6 +20,7 @@ class ViewController: UIViewController {
             colorsCollection.dataSource = self
         }
     }
+    @IBOutlet weak var colorsLabel: UILabel!
     
     // topview contains undo, clear and a slider
     // outlets
@@ -93,7 +94,9 @@ extension ViewController: UICollectionViewDelegate {
         return colors.count
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        canvas.setStrokeColor(colors[indexPath.row])
+        let color = colors[indexPath.row]
+        canvas.setStrokeColor(color)
+        colorsLabel.textColor = color
     }
 }
 
