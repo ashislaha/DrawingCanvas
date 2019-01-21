@@ -71,6 +71,7 @@ class CanvasView: UIView {
         setNeedsDisplay()
     }
     public func undo() {
+        guard !lines.isEmpty else { return }
         lines.removeLast()
         setNeedsDisplay()
     }
