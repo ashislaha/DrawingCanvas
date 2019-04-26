@@ -14,6 +14,10 @@
 		AD4C31F521EF7AA700E51259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4C31F321EF7AA700E51259 /* LaunchScreen.storyboard */; };
 		AD4C320021EF7AA700E51259 /* DrawingCanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4C31FF21EF7AA700E51259 /* DrawingCanvasTests.swift */; };
 		AD4C320B21EF7AEA00E51259 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4C320A21EF7AEA00E51259 /* CanvasView.swift */; };
+		AD7ACA9022734BF600E10602 /* ChooseArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ACA8F22734BF600E10602 /* ChooseArtView.swift */; };
+		AD7ACA9222734F6E00E10602 /* ChooseArtViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ACA9122734F6E00E10602 /* ChooseArtViewCell.swift */; };
+		AD7ACA9422734FF200E10602 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ACA9322734FF200E10602 /* UIView+extensions.swift */; };
+		AD7ACA972273559100E10602 /* ChooseArtPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ACA962273559100E10602 /* ChooseArtPopOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		AD4C31FF21EF7AA700E51259 /* DrawingCanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasTests.swift; sourceTree = "<group>"; };
 		AD4C320121EF7AA700E51259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4C320A21EF7AEA00E51259 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		AD7ACA8F22734BF600E10602 /* ChooseArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseArtView.swift; sourceTree = "<group>"; };
+		AD7ACA9122734F6E00E10602 /* ChooseArtViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseArtViewCell.swift; sourceTree = "<group>"; };
+		AD7ACA9322734FF200E10602 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		AD7ACA962273559100E10602 /* ChooseArtPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseArtPopOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,15 @@
 			path = DrawingCanvasTests;
 			sourceTree = "<group>";
 		};
+		AD7ACA952273556C00E10602 /* Choose Art */ = {
+			isa = PBXGroup;
+			children = (
+				AD7ACA8F22734BF600E10602 /* ChooseArtView.swift */,
+				AD7ACA9122734F6E00E10602 /* ChooseArtViewCell.swift */,
+			);
+			path = "Choose Art";
+			sourceTree = "<group>";
+		};
 		ADF9DA7121F228950015FB9A /* storyborads */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AD4C31EC21EF7AA600E51259 /* ViewController.swift */,
+				AD7ACA962273559100E10602 /* ChooseArtPopOverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				AD4C320A21EF7AEA00E51259 /* CanvasView.swift */,
+				AD7ACA952273556C00E10602 /* Choose Art */,
+				AD7ACA9322734FF200E10602 /* UIView+extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,8 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7ACA9422734FF200E10602 /* UIView+extensions.swift in Sources */,
+				AD7ACA9222734F6E00E10602 /* ChooseArtViewCell.swift in Sources */,
 				AD4C31ED21EF7AA600E51259 /* ViewController.swift in Sources */,
+				AD7ACA9022734BF600E10602 /* ChooseArtView.swift in Sources */,
 				AD4C31EB21EF7AA600E51259 /* AppDelegate.swift in Sources */,
+				AD7ACA972273559100E10602 /* ChooseArtPopOverViewController.swift in Sources */,
 				AD4C320B21EF7AEA00E51259 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

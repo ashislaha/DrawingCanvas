@@ -75,7 +75,4 @@ class CanvasView: UIView {
         lines.removeLast()
         setNeedsDisplay()
     }
-    public func theme(color: UIColor) {
-        backgroundColor = color
-    }
 }

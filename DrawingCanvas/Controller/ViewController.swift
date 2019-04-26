@@ -13,7 +13,11 @@ class ViewController: UIViewController {
     private let colors: [UIColor] = [.red, .blue, .green, .yellow, .orange, .black, .darkGray, .white, .cyan, .magenta, .orange, .purple, .brown]
     
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var canvas: CanvasView!
+    @IBOutlet weak var canvas: CanvasView! {
+        didSet {
+            canvas.backgroundColor = .clear
+        }
+    }
     @IBOutlet weak var colorsCollection: UICollectionView! {
         didSet {
             colorsCollection.delegate = self
@@ -41,24 +45,32 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var artOutlet: UIButton! {
+        didSet {
+            artOutlet.layer.cornerRadius = 10
+        }
+    }
+    
     // actions
     @IBAction func slide(_ sender: UISlider) {
         canvas.setStrokeWidth(CGFloat(sender.value))
     }
     @IBAction func clearAll(_ sender: UIButton) {
         canvas.clearAll()
+        for eachView in view.subviews where eachView is UIImageView {
+            eachView.removeFromSuperview()
+        }
     }
     @IBAction func undo(_ sender: UIButton) {
         canvas.undo()
     }
     @IBAction func theme(_ sender: UIButton) {
         let actionsheet = UIAlertController(title: "Choose Theme", message: "", preferredStyle: .actionSheet)
+        
         let whiteThemeAction = UIAlertAction(title: "White Background", style: .default) { [weak self] (action) in
-            self?.canvas.backgroundColor = .white
             self?.view.backgroundColor = .white
         }
         let blackThemeAction = UIAlertAction(title: "Black Background", style: .default) { [weak self] (action) in
-            self?.canvas.backgroundColor = .black
             self?.view.backgroundColor = .black
         }
         actionsheet.addAction(whiteThemeAction)
@@ -72,11 +84,26 @@ class ViewController: UIViewController {
         present(actionsheet, animated: true, completion: nil)
     }
     
+    @IBAction func chooseArt(_ sender: UIButton) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "popover" {
+            if let destinationVC = segue.destination as? ChooseArtPopOverViewController {
+                destinationVC.delegate = self
+                destinationVC.popoverPresentationController?.delegate = self
+                destinationVC.preferredContentSize = CGSize(width: 320, height: 300)
+                destinationVC.popoverPresentationController?.sourceRect = artOutlet.bounds
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        canvas.backgroundColor = .black
-        view.backgroundColor = .black
+        view.backgroundColor = .white
+        view.bringSubviewToFront(canvas)
     }
 }
 
@@ -118,3 +145,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension ViewController: ChooseArtViewDelegate {
+    func chooseArt(_ image: UIImage) {
+        for eachView in view.subviews where eachView is UIImageView {
+            eachView.removeFromSuperview()
+        }
+        // add
+        let imageView = UIImageView(image: image)
+        imageView.isUserInteractionEnabled = true
+        view.addSubview(imageView)
+        imageView.frame = canvas.frame
+        view.sendSubviewToBack(imageView)
+    }
+}
