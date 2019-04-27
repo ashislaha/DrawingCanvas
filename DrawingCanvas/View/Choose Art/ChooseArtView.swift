@@ -54,7 +54,7 @@ class ChooseArtView: UIView {
     }
     private func updatePhotos() {
         var images: [UIImage] = []
-        for i in 0...27 {
+        for i in 0...57 {
             if let image = UIImage(named: "a\(i)") {
                 images.append(image)
             }

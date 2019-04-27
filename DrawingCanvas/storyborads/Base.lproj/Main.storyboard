@@ -62,7 +62,6 @@
                                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="art"/>
                                                         <connections>
-                                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZU-en-KOu"/>
                                                             <segue destination="gKv-bu-rTz" kind="popoverPresentation" identifier="popover" popoverAnchorView="otG-mr-o4J" id="x0Y-ZK-Ndv">
                                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                             </segue>

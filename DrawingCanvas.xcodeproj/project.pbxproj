@@ -110,6 +110,7 @@
 			children = (
 				AD7ACA8F22734BF600E10602 /* ChooseArtView.swift */,
 				AD7ACA9122734F6E00E10602 /* ChooseArtViewCell.swift */,
+				AD7ACA9322734FF200E10602 /* UIView+extensions.swift */,
 			);
 			path = "Choose Art";
 			sourceTree = "<group>";
@@ -138,7 +139,6 @@
 			children = (
 				AD4C320A21EF7AEA00E51259 /* CanvasView.swift */,
 				AD7ACA952273556C00E10602 /* Choose Art */,
-				AD7ACA9322734FF200E10602 /* UIView+extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

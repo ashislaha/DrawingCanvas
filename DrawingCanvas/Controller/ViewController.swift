@@ -84,10 +84,6 @@ class ViewController: UIViewController {
         present(actionsheet, animated: true, completion: nil)
     }
     
-    @IBAction func chooseArt(_ sender: UIButton) {
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
             if let destinationVC = segue.destination as? ChooseArtPopOverViewController {
@@ -147,6 +143,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 extension ViewController: ChooseArtViewDelegate {
     func chooseArt(_ image: UIImage) {
+        canvas.clearAll()
         for eachView in view.subviews where eachView is UIImageView {
             eachView.removeFromSuperview()
         }

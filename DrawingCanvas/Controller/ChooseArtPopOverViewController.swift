@@ -22,5 +22,6 @@ class ChooseArtPopOverViewController: UIViewController {
 extension ChooseArtPopOverViewController: ChooseArtViewDelegate {
     func chooseArt(_ image: UIImage) {
         delegate?.chooseArt(image)
+        dismiss(animated: true, completion: nil)
     }
 }
