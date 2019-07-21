@@ -26,3 +26,4 @@ As iPad and iPhone upper versions like iPhone X, XR,XS, 8 Plus have enough space
 
 ## Implementation:
 
+- use bezier path for drawing.
